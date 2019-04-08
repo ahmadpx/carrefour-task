@@ -1,6 +1,6 @@
 # carrefour-task
 
-## what's implemented
+## What's implemented
 
 - The App developed using [React, Jest, Styled components, react-final-form].
 - Design matching the wireframe provided.
