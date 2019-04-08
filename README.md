@@ -1,5 +1,20 @@
 # carrefour-task
 
+## what's implemented
+
+- The App developed using [React, Jest, Styled components, react-final-form].
+- Design matching the wireframe provided.
+- Validation for the form.
+- Unit tests.
+- Ajax call if the form is valid to authenticate the user.
+- Clicking on the search button will expand the blue box and becomes typable.
+- Search to filter products by title.
+- Responsive.
+
+## Time of development
+
+6 HOURS
+
 ## How it's working
 
 In the project directory, you can run:
