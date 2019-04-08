@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 import OutsideClickHandler from 'react-outside-click-handler';
 import logo from '../assets/logo.svg';
 import searchIcon from '../assets/search.svg';
+import { COLORS } from '../constatns';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -30,7 +31,7 @@ const Search = styled.div`
   width: 200px;
   height: 40px;
   border-radius: 4px;
-  background-color: #f0f7fe;
+  background-color: ${COLORS.secondary};
   display: flex;
   align-items: center;
   padding-right: 15px;

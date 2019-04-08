@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { COLORS } from '../constatns';
 
 const Wrapper = styled.a`
   display: block;
@@ -23,7 +24,7 @@ const Wrapper = styled.a`
 const ImgWrapper = styled.div`
   width: 220px;
   height: 220px;
-  border: 3px solid #f6f6f6;
+  border: 3px solid ${COLORS.border};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,7 +37,7 @@ const ImgWrapper = styled.div`
 `;
 const Title = styled.h3`
   font-size: 14px;
-  color: #414141;
+  color: ${COLORS.text};
   font-weight: 400;
   margin: 0 0 9px;
 `;

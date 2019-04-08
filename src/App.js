@@ -4,6 +4,7 @@ import Header from './components/Header';
 import SignInForm from './components/SignInForm';
 import Product from './components/Product';
 import { getProducts, searchProducts } from './utils/search.utils';
+import { COLORS } from './constatns';
 
 const Wrapper = styled.div`
   width: 800px;
@@ -25,6 +26,14 @@ const Products = styled.section`
   }
 `;
 
+const NoResults = styled.div`
+  width: 100%;
+  text-align: center;
+  color: ${COLORS.text};
+  font-size: 16px;
+  font-weight: 400;
+`;
+
 function App() {
   const [allProducts] = useState(getProducts());
   const [query, setQuery] = useState('');
@@ -43,12 +52,19 @@ function App() {
 
       <SignInForm />
 
-      <Products>
-        {Array.isArray(products) &&
-          products.map((product, index) => (
+      {Array.isArray(products) && products.length > 0 ? (
+        <Products>
+          {products.map((product, index) => (
             <Product key={index} {...product} />
           ))}
-      </Products>
+        </Products>
+      ) : (
+        <NoResults>
+          Sorry, we couldn't found any results matches your search criteria.{' '}
+          <br />
+          try to update your search query.
+        </NoResults>
+      )}
     </Wrapper>
   );
 }
