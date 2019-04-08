@@ -1,7 +1,7 @@
 import productImg from '../assets/product.png';
 
 /**
- * get products
+ * get products [mock data for products]
  * @returns {Array<Object>} products
  */
 export function getProducts() {
@@ -51,7 +51,7 @@ export function getProducts() {
  * @returns {Array<Object>} products
  */
 export function searchProducts(query, products) {
-  if (!products || !products.length) return;
+  if (!products || !products.length) return [];
 
   return products.filter(({ title }) => {
     if (typeof title !== 'string' || typeof query !== 'string') return false;
